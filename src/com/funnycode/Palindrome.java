@@ -37,20 +37,16 @@ package com.funnycode;
 public class Palindrome {
 
     public boolean isPalindrome(int x) {
-        boolean result = true;
         // Convert the integer to String to get each number and compare it.
         String inputNumber = Integer.toString(x);
         for (int i = 0; i < inputNumber.length(); i++){
-            // TODO: this can be improved... I don't need a for loop here, I can take the value a compare it directly.
-            for (int j = inputNumber.length() - i - 1; j > 0; j--) {
+                int j = inputNumber.length() - i - 1;
                 if (inputNumber.charAt(i) != inputNumber.charAt(j)) {
                     return false;
                 }
-                break;
-            }
         }
 
-        return result;
+        return true;
     }
 }
 
